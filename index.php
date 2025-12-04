@@ -233,6 +233,8 @@ switch ($page) {
                     </div>
                 </div>
             </section>
+
+            <p>hahahahahahahahahahahahahahaha</p>
         </div>
         <?php
         break;
