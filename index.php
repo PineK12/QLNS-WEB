@@ -195,6 +195,10 @@ switch ($page) {
         include './pages/lichsu_chamcong.php';
         break;
 
+    case 'baocao_chamcong':
+        include './pages/baocao_chamcong.php';
+        break;
+
     case 'bangluong':
         // Include trang bảng lương
         include './pages/bangluong.php';

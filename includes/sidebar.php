@@ -84,7 +84,8 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="index.php?page=baocao_chamcong" 
+                                class="nav-link <?php echo ($current_page == 'baocao_chamcong') ? 'active' : ''; ?>">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Báo cáo chấm công</p>
                             </a>
