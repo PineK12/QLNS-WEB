@@ -219,6 +219,10 @@ switch ($page) {
         include './pages/thongke_luong.php';
         break;
 
+    case 'vaitro_quyen':
+        include './pages/vaitro_quyen.php';
+        break;
+        
     default:
         // Nếu không tìm thấy trang, hiển thị 404
         ?>

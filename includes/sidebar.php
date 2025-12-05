@@ -131,7 +131,8 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                 <li class="nav-header">HỆ THỐNG</li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="index.php?page=vaitro_quyen" 
+                    class="nav-link <?php echo ($current_page == 'vaitro_quyen') ? 'active' : ''; ?>">
                         <i class="nav-icon fas fa-user-tag"></i>
                         <p>Vai trò & Quyền</p>
                     </a>
