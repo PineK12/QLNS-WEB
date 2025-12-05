@@ -1,5 +1,5 @@
 <?php
-// 1. Lấy trang hiện tại từ tham số URL 'page'. Nếu không có thì mặc định là 'dashboard'
+// Lấy trang hiện tại từ tham số URL 'page'
 $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 ?>
 
@@ -27,7 +27,6 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                 </li>
 
                 <?php
-                // Kiểm tra xem đang ở trang nào để mở menu cha
                 $pages_nv = ['nhanvien_list', 'nhanvien_add', 'nhanvien_edit', 'nhanvien_profile'];
                 $open_nv = in_array($current_page, $pages_nv);
                 ?>
@@ -54,13 +53,6 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                                 <p>Thêm nhân viên</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="index.php?page=nhanvien_list"
-                                class="nav-link <?php echo ($current_page == 'nhanvien_profile') ? 'active' : ''; ?>">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Hồ sơ nhân viên</p>
-                            </a>
-                        </li>
                     </ul>
                 </li>
 
@@ -85,7 +77,8 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="index.php?page=lichsu_chamcong"
+                                class="nav-link <?php echo ($current_page == 'lichsu_chamcong') ? 'active' : ''; ?>">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Lịch sử chấm công</p>
                             </a>
@@ -131,36 +124,6 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                                 <p>Phiếu lương</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Hệ số lương</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-hand-holding-usd"></i>
-                        <p>
-                            Đóng Góp & Nghỉ
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Đóng tăng lương</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Đơn nghỉ việc</p>
-                            </a>
-                        </li>
                     </ul>
                 </li>
 
@@ -170,13 +133,6 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-user-tag"></i>
                         <p>Vai trò & Quyền</p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-graduation-cap"></i>
-                        <p>Trình độ</p>
                     </a>
                 </li>
 
@@ -207,13 +163,6 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                                 <p>Thống kê nhân sự</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="index.php?page=thongke_luong"
-                                class="nav-link <?php echo ($current_page == 'thongke_luong') ? 'active' : ''; ?>">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Thống kê lương</p>
-                            </a>
-                        </li>
                     </ul>
                 </li>
 
@@ -223,13 +172,6 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-cogs"></i>
                         <p>Cài đặt hệ thống</p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-user-shield"></i>
-                        <p>Quản lý tài khoản</p>
                     </a>
                 </li>
 
